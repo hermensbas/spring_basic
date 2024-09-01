@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-2">
+      <h4>EBMS Ping</h4>
+      <br/>
+    </div>
+  </div>
+
+  <form name="pingf" class="form-horizontal" ng-submit="ping()">
+    <div class="form-group">
+      <label for="CPAid" class="col-sm-2 control-label">CPAid</label>
+      <div class="col-sm-6">
+        <input type="text" id="CPAid" ng-model="CPAid"  required />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="from" class="col-sm-2 control-label">From</label>
+      <div class="col-sm-6">
+        <input type="text" id="from" placeholder="00000004000000059000" ng-model="from" required />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="to" class="col-sm-2 control-label">To</label>
+      <div class="col-sm-6">
+        <input type="text" id="to" placeholder="" ng-model="to"  required />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <button ng-disabled="pingf.$invalid" class="btn btn-sm btn-primary">PING</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-2">
+      {{ result }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  {{ error }}
+  <table class="table" ng-class="{'hide' : error}">
+    <tbody>
+    <tr>
+      <th scope="row">Versie</th>
+      <td>{{ version }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Build-datum</th>
+      <td>{{ date | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <!--<div pretty-json="data"/>-->
+</div>

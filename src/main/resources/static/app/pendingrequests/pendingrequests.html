@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Openstaande Opdrachten</h2>
+    <div>
+        <span>Aantal resultaten: {{ pagination.count }}</span>
+        <span class="pull-right">
+      <button class="btn btn-primary btn-sm" ng-click="updateResults()"><span class="glyphicon glyphicon-repeat"/> Refresh</button>
+    </span>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>OIN</th>
+            <th>ID BevoegdGezag</th>
+            <th>ID Levering</th>
+            <th>Service</th>
+            <th>Status</th>
+            <th>Aangemaakt</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="status in statussen" ng-click="viewDetails(status)">
+            <td>{{ status.oin }}</td>
+            <td>{{ status.idBevoegdGezag }}</td>
+            <td>{{ status.idLevering }}</td>
+            <td>{{ status.service }}</td>
+            <td>{{ status.status }}</td>
+            <td>{{ status.creatieDatum | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+        </tbody>
+    </table>
+    <ul uib-pagination ng-model="pagination.pageNum" ng-change="updateResults()" ng-class="{ hide : pagination.count < pagination.pageSize }" items-per-page="pagination.pageSize" total-items="pagination.count" boundary-links="true" rotate="true" max-size="10" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+</div>

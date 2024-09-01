@@ -1,0 +1,83 @@
+﻿<div class="container">
+    <h2>Publiceren</h2>
+    <div class="monitor">
+        <div ng-if="!errorTr"><span class="glyphicon glyphicon-ok" style="color:green"></span> Transformaties</div>
+        <div ng-if="errorTr"><span class="glyphicon glyphicon-remove" style="color:red"></span> Transformaties</div>
+    </div>
+    <table class="table monitor" ng-if="errorTr">
+        <thead>
+        <tr>
+            <th>Datum Aangemaakt</th>
+            <th>Status</th>
+            <th>Publicatie ID</th>
+            <th>OIN</th>
+            <th>ID Levering</th>
+            <th>Manifestatie</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="bericht in transformaties" ng-click="viewDetails(bericht)">
+            <td>{{bericht.aangemaakt * 1000 | date:'dd-MM-yyyy HH:mm:ss.sss'}}</td>
+            <td>{{bericht.status}}</td>
+            <td>{{bericht.publicatieId}}</td>
+            <td>{{bericht.oin}}</td>
+            <td>{{bericht.idLevering}}</td>
+            <td>{{bericht.manifestatie}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="monitor">
+        <div ng-if="!errorPo"><span class="glyphicon glyphicon-ok" style="color:green"></span> Publicatieopdrachten
+        </div>
+        <div ng-if="errorPo"><span class="glyphicon glyphicon-remove" style="color:red"></span> Publicatieopdrachten
+        </div>
+    </div>
+    <table class="table monitor" ng-if="errorPo">
+        <thead>
+        <tr>
+            <th>Datum Aangeboden</th>
+            <th>Status</th>
+            <th>Publicatie ID</th>
+            <th>OIN</th>
+            <th>ID Levering</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="bericht in publicatieopdrachten" ng-click="viewDetails(bericht)">
+            <td>{{bericht.aangeboden * 1000 | date:'dd-MM-yyyy HH:mm:ss.sss'}}</td>
+            <td>{{bericht.status}}</td>
+            <td>{{bericht.publicatieId}}</td>
+            <td>{{bericht.oin}}</td>
+            <td>{{bericht.idLevering}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="monitor">
+        <div ng-if="!errorNg"><span class="glyphicon glyphicon-ok" style="color:green"></span> Publicatie datum niet
+            gehaald
+        </div>
+        <div ng-if="errorNg"><span class="glyphicon glyphicon-remove" style="color:red"></span> Publicatie datum niet
+            gehaald
+        </div>
+    </div>
+    <table class="table monitor" ng-if="errorNg">
+        <thead>
+        <tr>
+            <th>Datum Aangeboden</th>
+            <th>Status</th>
+            <th>Publicatie ID</th>
+            <th>OIN</th>
+            <th>ID Levering</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="bericht in publicatieopdrachtennietgehaald" ng-click="viewDetails(bericht)">
+            <td>{{bericht.aangeboden * 1000 | date:'dd-MM-yyyy HH:mm:ss.sss'}}</td>
+            <td>{{bericht.status}}</td>
+            <td>{{bericht.publicatieId}}</td>
+            <td>{{bericht.oin}}</td>
+            <td>{{bericht.idLevering}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

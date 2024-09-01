@@ -1,0 +1,21 @@
+<div class="container">
+
+  <row>
+    <div class="alert alert-danger col-sm-5 col-sm-offset-2" ng-show="error">
+      Sorry, dat werkte niet. Probeer het opnieuw.
+    </div>
+  </row>    
+  <row>
+  <form class="form-horizontal col-sm-4 col-sm-offset-2" role="form" ng-submit="login()">
+    <div class="form-group">
+      <label for="username">Gebruikersnaam:</label> <input type="text"
+        class="form-control" id="username" name="username" ng-model="credentials.username"/>
+    </div>
+    <div class="form-group">
+      <label for="password">Wachtwoord:</label> <input type="password"
+        class="form-control" id="password" name="password" ng-model="credentials.password"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Inloggen</button>
+  </form>
+  </row>	   
+</div>  

@@ -1,0 +1,46 @@
+<div class="container">
+    <h3>Opnieuw Transformeren</h3>
+
+    <div class="panel panel-default">
+        <table class="table">
+            <tbody>
+            <tr>
+                <th scope="col">OIN</th>
+                <td>
+                    <span>{{ oin }}</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">idlevering</th>
+                <td>
+                    <span>{{ idLevering }}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel panel-default">
+        <b style="margin-left:8px">Publicatie Id: {{transformaties[0].publicatieId}} <button id="{{'versturen_transformaties'+$index}}" ng-show="showButton" ng-click="resendToestand()">Opnieuw Transformeren</button></b>
+        <b style="margin-left:20px">{{ result }}</b>
+        <table class="table Transformaties">
+            <thead>
+            <tr>
+                <th>Datum Aangemaakt</th>
+                <th>Datum Aangepast</th>
+                <th>Status</th>
+                <th>Opdracht ID</th>
+                <th>Manifestatie</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="bericht in transformaties" ng-click="viewDetails(bericht)">
+                <td>{{util.toDate(bericht.aangemaakt) | date :'dd-MM-yyyy HH:mm:ss.sss'}}</td>
+                <td>{{util.toDate(bericht.aangepast) | date :'dd-MM-yyyy HH:mm:ss.sss'}}</td>
+                <td>{{bericht.status}}</td>
+                <td>{{bericht.opdrachtId}}</td>
+                <td>{{bericht.manifestatie}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/config/SpringContextPrinter.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/controller/AccountController.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/controller/PublicRoleController.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/controller/AdminRoleController.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/Main.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/config/properties/LoadInfoProperties.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/controller/UserRoleController.java
+/home/dev/git/spring_basic/src/main/java/nl/overheid/koop/basic/application/config/SpringSecurityConfig.java

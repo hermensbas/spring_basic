@@ -1,0 +1,82 @@
+@media (min-width: 1500px) {
+    .container {
+        width: 1400px;
+    }
+}
+@media (min-width: 1750px) {
+    .container {
+        width: 1650px;
+    }
+}
+
+div.environment-header {
+    margin-top: 5px;
+    padding: 1em;
+    background-color: antiquewhite;
+}
+
+body.local div.environment-header {
+    background-color: blue;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='3em' width='6em'><style>.env { fill: black; font: italic small-caps 20px serif;} </style><text x='5' y='20' class='env'> Local</text></svg>");
+}
+body.dev div.environment-header {
+    background-color: blue;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='3em' width='6em'><style>.env { fill: black; font: italic small-caps 20px serif;} </style><text x='5' y='20' class='env'> Dev</text></svg>");
+}
+body.test div.environment-header {
+    background-color: #e3e300;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='3em' width='6em'><style>.env { fill: black; font: italic small-caps 20px serif;} </style><text x='5' y='20' class='env'> Test</text></svg>");
+}
+body.acc div.environment-header {
+    background-color: green;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='3em' width='6em'><style>.env { fill: black; font: italic small-caps 20px serif;} </style><text x='5' y='20' class='env'> Acc</text></svg>");
+}
+body.perf-acc div.environment-header {
+    background-color: yellow;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='3em' width='6em'><style>.env { fill: black; font: italic small-caps 20px serif;} </style><text x='5' y='20' class='env'> Perf-acc</text></svg>");
+}
+body.preprod div.environment-header {
+    background-color: violet;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='3em' width='6em'><style>.env { fill: black; font: italic small-caps 20px serif;} </style><text x='5' y='20' class='env'> Preprod</text></svg>");
+}
+body.prod div.environment-header {
+    padding: 0; margin: 0;
+}
+
+.date-input {
+  min-width: 8em;
+}
+.scroll {
+  margin-top: 10px;
+  height: 950px;
+  overflow: scroll;
+}
+.line-wrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+tr[ng-click] {
+  cursor: pointer;
+}
+.table>thead>tr>th {
+  vertical-align: middle;
+}
+th>input {
+  font-weight: normal;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+table.monitor {
+    text-indent: 20px;
+    table-layout: auto;
+    white-space: nowrap;
+    width: 50%;
+    border-bottom: 1pt solid #c6c6c6;
+}
+
+div.monitor {
+    font-weight: bold;
+    font-size: 110%;
+    margin-top: 15px;
+}

@@ -1,0 +1,68 @@
+﻿<div class="container">
+  {{ error }}
+  <div>
+    <span>Aantal resultaten: {{ pagination.count }}</span>
+    <span class="pull-right">
+      <button class="btn btn-primary btn-sm" ng-click="updateResults()"><span
+          class="glyphicon glyphicon-repeat"/> Refresh</button>
+    </span>
+  </div>
+
+  <hr/>
+
+  <table class="table table-hover" ng-class="{'hide' : error}">
+    <thead>
+    <tr>
+      <th scope="col">Request-id<br/><input ng-model="filter.requestId"
+                                            ng-change="filterResults()"/></th>
+      <th scope="col">Resource-id<br/><input ng-model="filter.resourceId"
+                                             ng-change="filterResults()"/></th>
+      <th scope="col">Zip-status<br/><input ng-model="filter.zipStatus"
+                                            ng-change="filterResults()"/></th>
+      <th scope="col">is-delivered<br/><input ng-model="filter.isDelivered"
+                                              ng-change="filterResults()"/></th>
+      <th scope="col">request-status<br/><input ng-model="filter.requestStatus"
+                                                ng-change="filterResults()"/></th>
+      <th scope="col">error codes<br/></th>
+      <th scope="col">
+        Datum<br/>
+        <div class="input-group date">
+          <input size="10" class="form-control date-input" uib-datepicker-popup
+                 ng-model="filter.fromDate" is-open="from.opened" show-button-bar="false"
+                 datepicker-options="dateOptions" ng-change="filterResults()"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openFrom()"><i
+                class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          <div class="input-group-addon">t/m</div>
+          <input size="10" class="form-control date-input" uib-datepicker-popup
+                 ng-model="filter.toDate" is-open="to.opened" show-button-bar="false"
+                 datepicker-options="dateOptions" ng-change="filterResults()"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="openTo()"><i
+                class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </div>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="status in statussen">
+      <td>{{ status.requestId }}</td>
+      <td>{{ status.resourceId }}</td>
+      <td>{{ status.zipStatus }}</td>
+      <td>{{ status.isDelivered }}</td>
+      <td>{{ status.requestStatus }}</td>
+      <td ng-repeat="er in status.error">{{ er.code }}</td>
+      <td ng-show="!status.error.length"></td>
+      <td>{{util.toDate( status.creationDate) | date :'yyyy-MM-dd HH:mm:ss'}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <ul uib-pagination ng-model="pagination.pageNum" ng-change="updateResults()"
+      ng-class="{ hide : pagination.count < pagination.pageSize }"
+      items-per-page="pagination.pageSize" total-items="pagination.count" boundary-links="true"
+      rotate="true" max-size="10" class="pagination-sm" previous-text="&lsaquo;"
+      next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+</div>

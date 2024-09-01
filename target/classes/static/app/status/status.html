@@ -1,0 +1,28 @@
+<div class="container">
+  {{ error }}
+  <table class="table" ng-class="{'hide' : error}">
+    <thead>
+    <tr>
+      <th scope="col" colspan="2">
+        Component
+      </th>
+      <th scope="col">
+        Status
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="2">regisseur</td>
+      <td><span class="glyphicon" ng-class="data.status == 'UP' ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"/> {{ data.status }}</td>
+    </tr>
+    <tr ng-repeat="(key, item) in data.components">
+      <td></td>
+      <td>{{ key }}</th>
+      <td><span class="glyphicon" ng-class="item.status == 'UP' ? 'glyphicon-ok text-success' : 'glyphicon-remove text-danger'"/> {{ item.status }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!--<div pretty-json="data"/>-->
+</div>

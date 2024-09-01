@@ -1,0 +1,8 @@
+nl/overheid/koop/basic/application/config/SpringContextPrinter.class
+nl/overheid/koop/basic/application/config/SpringSecurityConfig.class
+nl/overheid/koop/basic/application/config/properties/LoadInfoProperties.class
+nl/overheid/koop/basic/application/Main.class
+nl/overheid/koop/basic/application/controller/AdminRoleController.class
+nl/overheid/koop/basic/application/controller/AccountController.class
+nl/overheid/koop/basic/application/controller/UserRoleController.class
+nl/overheid/koop/basic/application/controller/PublicRoleController.class

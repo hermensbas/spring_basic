@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-2">
+      <h4>Upload Intern</h4>
+      <p>In dit scherm kunnen de volgende ZIP bestanden geüpload worden:</p>
+      <ul>
+        <li><strong>RegelingVersie</strong><br/>
+          <p>Een ZIP bestand met een Consolidatie van een Regelingversie (en optioneel OW-Data en GML voor OZON). De opdracht.xml bepaalt of de Consolidatie alleen wordt doorgeleverd aan OZON of wordt opslagen en doorgeleverd aan OZON.</p>
+        </li>
+        <li>
+          <strong>GIO's</strong>
+          <p>Een ZIP bestand met 1 of meer GIO's die bekendgemaakt moeten worden</p>
+        </li>
+      </ul>
+
+      <p><strong>Let op</strong>: De idLevering in de aangeleverde zip moet uniek zijn.</p>
+      <br/>
+    </div>
+  </div>
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="zipFile" class="col-sm-2 control-label">Zip bestand</label>
+      <div class="col-sm-6">
+        <input type="file" file-model="zipFile" id="zipFile" ng-click="emptyResult()"/>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <button ng-click="zipUploadIntern()" class="btn btn-sm btn-primary">Upload</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-2">
+      {{ result }}
+    </div>
+  </div>
+</div>
