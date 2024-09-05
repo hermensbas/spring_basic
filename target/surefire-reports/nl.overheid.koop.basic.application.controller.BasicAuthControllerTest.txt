@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: nl.overheid.koop.basic.application.controller.BasicAuthControllerTest
--------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.774 s -- in nl.overheid.koop.basic.application.controller.BasicAuthControllerTest

@@ -19,6 +19,10 @@ import static org.hamcrest.Matchers.containsString;
 @ExtendWith(MockitoExtension.class)
 @TestPropertySource(properties = {
     "management.server.port=",
+    "spring.main.banner-mode=off",
+    "spring.main.log-startup-info=off",
+    "application.correlation-id.enabled=true",
+    "application.correlation-id.required=false",
     "application.load-info.enabled=false"
 })
 class BasicAuthControllerTest {
