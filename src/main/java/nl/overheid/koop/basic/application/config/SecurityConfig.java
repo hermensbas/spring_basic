@@ -31,12 +31,13 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(final HttpSecurity http) throws Exception {
 
         http
- //           .csrf(csrf -> csrf.csrfTokenRepository
+            //           .csrf(csrf -> csrf.csrfTokenRepository
 //                (CookieCsrfTokenRepository.withHttpOnlyFalse()))
             .csrf(withDefaults())
             .headers(withDefaults())
             .authorizeHttpRequests(config -> config
                 .requestMatchers(
+                    "/",
                     "/index.html",
                     "/assets/**",
                     "/images/**",
