@@ -6,5 +6,5 @@ public class WebClientConfig {
  // Webclient, Java HttpClient, okhttp, 
  // apache httpClient, blocking, none blocking?
  // reactive, futures, traditional threads
- // which, why should we choose?
+ // which, why, what should we choose?
 }
