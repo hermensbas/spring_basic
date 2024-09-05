@@ -7,4 +7,5 @@ public class WebClientConfig {
  // apache httpClient, blocking, none blocking?
  // reactive, futures, traditional threads
  // which, why, what should we choose?
+ // the answer might be 42
 }
