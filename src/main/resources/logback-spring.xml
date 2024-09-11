@@ -9,7 +9,7 @@
                     <pattern>
                         {
                         "date_time": "%d{yyyy-MM-dd'T'HH:mm:ss.SSSX}",
-                        "correction_id": "%mdc{cid}",
+                        "correlation_id": "%mdc{cid}",
                         "logger": "%logger",
                         "level": "%level",
                         "thread": "%thread",
